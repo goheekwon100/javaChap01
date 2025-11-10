@@ -12,6 +12,7 @@ public class Hello { //클래스 선언, 첫 글자는 반드시 upper case, src
 	// 프로그램 실행 진입점(EP:entry point)
 	// main 메소드: 자바 프로그램 실행 시 가장 먼저 실행되는 메소드
 	public static void main(String[] args) {
+		
 		System.out.println("Hello,// /**/ () for()Java"); //문자열 내부 주석 사용 불가.
 		
 	}
