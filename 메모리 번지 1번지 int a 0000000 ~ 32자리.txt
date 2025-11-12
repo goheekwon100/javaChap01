@@ -1,0 +1,21 @@
+각
+keyCode: 234
+keyCode: 176
+keyCode: 129
+
+
+ㅏ
+keyCode: 227
+keyCode: 133
+keyCode: 143
+
+ㅑ
+keyCode: 227
+keyCode: 133
+keyCode: 145
+
+
+ㄱ
+keyCode: 227
+keyCode: 132
+keyCode: 177
