@@ -16,6 +16,7 @@ public class Homework01 {
 		sc.close();
 		
 		bmi = weight / (key *key );
-		System.out.printf("BMI 지수 : %2.1f\n", bmi);
+		System.out.printf("BMI 지수 : %2.2f\n", bmi);
+		System.out.printf("BMI 지수 : %2.1f\n", bmi); // .1 이후에서  반올림해서 계산
 	}
 }
