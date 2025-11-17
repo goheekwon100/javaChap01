@@ -22,14 +22,26 @@ public class Homework05 {
 		else if(num == 3) exercise = "벤치 프레스";
 		else if(num == 4) exercise = "풀업";
 		
-		if(1 <= num && num <= 4)
-			System.out.println(exercise + " 운동 시간입니다.");
-		else if(num==5){
-			System.out.println("오늘도 수고하셨습니다.");
-		}else if(num <= 0){
+//		if(1 <= num && num <= 4)
+//			System.out.println(exercise + " 운동 시간입니다.");
+//		else if(num==5){
+//			System.out.println("오늘도 수고하셨습니다.");
+//		}else if(num <= 0){
+//			System.out.println("양수만 입력해주세요.");
+//		}else{
+//			System.out.println("목록에 있는 숫자만 입력해주세요.");
+//		}
+		//erp, Early Return Pattern
+		if(num <= 0){
 			System.out.println("양수만 입력해주세요.");
-		}else{
+			return;
+		}else if( num > 5){
 			System.out.println("목록에 있는 숫자만 입력해주세요.");
+			return;
+		}else if(1 <= num && num <= 4)
+			System.out.println(exercise + " 운동 시간입니다.");
+		else{
+			System.out.println("오늘도 수고하셨습니다.");
 		}
 	}
 }

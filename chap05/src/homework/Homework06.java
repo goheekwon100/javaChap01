@@ -7,8 +7,8 @@ public class Homework06 {
 		int left, right;
 		for (int i = 0; i < num; i++) {
 			for (int j = 0; j < num*2-1; j++) {
-				left = (num*2-1) / 2 - i;
-				right = (num*2-1) / 2 + i;
+				left = (num*2-1) / 2 - i; //* 출력을 시작할 index
+				right = (num*2-1) / 2 + i;//*출력을 끝낼 index
 				if(j >= left && j <= right){
 					System.out.print("*");
 				}else {

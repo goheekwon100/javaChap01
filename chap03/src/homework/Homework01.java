@@ -11,6 +11,8 @@ public class Homework01 {
 		str = sc.nextLine();
 		sc.close();
 		
-		System.out.println((str.equals("간다")) ?  "앵무새 : 온다" : "앵무새 : 간다");
+		System.out.println(("간다".equals(str)) ?  "앵무새 : 온다" : "앵무새 : 간다");
+		
+		//str.equals로 작성시 입력값이 null일 때 예외가 발생할 수 있다. NPE 널포인트익셉션		 
 	}
 }

@@ -16,6 +16,7 @@ public class Homework04 {
 		english = sc.nextInt();
 		
 		sc.nextLine();
+		sc.close();
 		System.out.print("국어 : " + korea);
 		System.out.print("수학 : " + math);
 		System.out.print("영어 : " + english);
@@ -25,6 +26,13 @@ public class Homework04 {
 		System.out.println(korea < 60 ? "휴대폰을 바꿀 수 없습니다." : 
 			math < 60 ? "휴대폰을 바꿀 수 없습니다." : 
 				english < 60 ? "휴대폰을 바꿀 수 없습니다." : "휴대폰을 바꿀 수 있습니다.");
+		
+		//삼항 연산자 중첩금지
+		int average = (korea+math+english)/3;
+		boolean phoneChange = (korea > 59 && math > 59 && english > 59 && average > 59)?
+			true : false;
+		
+		System.out.println(phoneChange ? "휴대폰을 바꿀 수 있습니다." : "휴대폰을 바꿀 수 없습니다.");
 		
 	}
 }

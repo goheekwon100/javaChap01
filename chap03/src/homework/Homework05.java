@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Homework05 {
 	public static void main(String[] args) {
-		String juminNumber;
 		char num;
 		
 		Scanner sc = new Scanner(System.in);
-		num = sc.nextLine().charAt(7);
+		num = sc.nextLine().charAt(0);
+		sc.close();
 		
 		System.out.println(num == '1' ? "입력하신 주민번호는 남성입니다." :
 			num == '3' ? "입력하신 주민번호는 남성입니다." :
