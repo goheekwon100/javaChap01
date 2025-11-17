@@ -41,6 +41,7 @@ public class SwitchExample {
 
 		System.out.print("조명의 밝기를 입력하세요 (0~3): ");
 		bulbLight = sc.nextInt();
+		sc.close();
 
 		switch (bulbLight) {
 			case 0:

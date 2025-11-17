@@ -13,7 +13,7 @@ public class ArayCreateByValueExample1 {
 		
 		//반복문을 이용한 합계와 평균 구하기
 		
-		int sum=0,average;
+		int sum=0;
 		for(int i=0; i<scores.length;i++) {
 			sum += scores[i];
 		}
