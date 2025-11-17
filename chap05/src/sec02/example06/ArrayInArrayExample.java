@@ -25,6 +25,7 @@ public class ArrayInArrayExample {
 				System.out.println("englishScores[" +i+"]["+j+"] : " + englishScores[i][j]);
 			}
 		}
+		//;
 		
 		
 		//값 목록으로 배열 생성
