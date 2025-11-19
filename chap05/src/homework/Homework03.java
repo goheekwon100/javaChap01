@@ -22,7 +22,7 @@ public class Homework03 {
 		int num=0;
 		
 		for (int i = 0; i < intArr.length; i++) {
-			if(i < intArr.length / 2 + 1) {
+			if(i <= intArr.length / 2) {
 				intArr[i] = ++num;
 			}else {
 				intArr[i] = --num;

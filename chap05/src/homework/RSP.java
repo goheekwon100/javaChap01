@@ -1,7 +1,7 @@
 package homework;
 
-public class rSP {
-	int rSP(String userChoice) {
+public class RSP {
+	int returnIndex(String userChoice) {
 		if ("가위".equals(userChoice)) {
 			return 0;
 		}else if ("바위".equals(userChoice)) {

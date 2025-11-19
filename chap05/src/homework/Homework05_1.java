@@ -11,14 +11,14 @@ public class Homework05_1 {
 		int[] result = new int[4]; //승 무 패
 		
 		while(true) {
-			rSP userIndexObj = new rSP();
+			RSP userIndexObj = new RSP();
 			System.out.print("가위바위보: ");
 			userChoice = sc.next();
-			int userIndex = userIndexObj.rSP(userChoice);
+			int userIndex = userIndexObj.returnIndex(userChoice);
 			if("stop".equals(userChoice)) {
 				break;
 			}
-			if(userIndex != -1) {
+			if(userIndex == -1) {
 				System.out.println("가위 바위 보 몰라?");
 			}else {
 				int randomIndex = (int)(Math.random()*3);
