@@ -42,7 +42,5 @@ public class EnumWeekExmaple {
 				// 3. 값이 추가되거나 변경되는 경우 한 곳에서만 변경하면 되기 때문에 유지보수(관리)가 용이
 				// 4. 자동 완성 지원
 		
-		DayOfWeek
-		
 	}
 }

@@ -4,26 +4,27 @@ import java.util.Scanner;
 
 public class Homework02 {
 	public static void main(String[] args) {
-		
-		int dan;
+		int inputArrayLength;
 		Scanner sc = new Scanner(System.in);
 		
-		while(true) {
-			System.out.print("숫자 : ");
-			dan = sc.nextInt();
-			if(dan < 0) {
-				System.out.println("양수만 입력해주세요.");
-			}else if (dan > 9){
-				System.out.println("9이하의 숫자를 입력해주세요.");
-			}else if (dan == 0 ) {
-				break;
-			}else {
-				System.out.println("=== "+ dan +"단 ===");
-				for (int i = 1; i < 10; i++) {
-					System.out.println(dan + " * " + i + " = " + (dan * i));
-				}
-			}
+		System.out.print("생성을 원하는 배열크기를 입력해주세요(정수): ");
+		inputArrayLength = sc.nextInt();
+		
+		int[] intArr = new int[inputArrayLength];
+		
+		for (int i = 0; i < intArr.length; i++) {
+			System.out.print("배열 " + i + "번째 인덱스에 넣을 값 : ");
+			intArr[i] = sc.nextInt();
 		}
+		
+		int sum = 0;
+		for (int i = 0; i < intArr.length; i++) {
+			System.out.print(intArr[i] + " ");
+			sum += intArr[i];
+		}
+		System.out.println("\n총 합 : " + sum);
 		sc.close();
+		
+		
 	}
 }

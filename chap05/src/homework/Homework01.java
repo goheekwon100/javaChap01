@@ -1,26 +1,41 @@
 package homework;
 
-import java.util.Scanner;
-
 public class Homework01 {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+//		int[] keyArray = {152,180,165,158,171};
+		int[] keyArray = {5,3,8,4,2};
 		
-		int num=0;
-		while(num<1 || num>50) {
-			System.out.print("정수(1~50): ");
-			num = sc.nextInt();
-			if(num<1 || num>50) {
-				System.out.println("1~50 사이의 정수를 입력하세요.");
+		int tmp;
+		System.out.print("정렬대상:{");
+		for (int i = 0; i < keyArray.length; i++) {
+			System.out.print(keyArray[i]);
+			if(i < keyArray.length-1) {
+				System.out.print(", ");
 			}
 		}
-		sc.close();
-		int sum=0;
-		for (int i = 1; i <= num; i++) {
-			if (i % 2 == 0) {
-				sum += i;	
+		System.out.println("}");
+		
+		for (int i = 0; i < keyArray.length-1; i++) {
+			for (int j = 0; j < keyArray.length-1-i; j++) {
+				if(keyArray[j] > keyArray[j+1]) {
+					tmp = keyArray[j+1]; 
+					keyArray[j+1] = keyArray[j];
+					keyArray[j] = tmp;
+				}
+			}
+			System.out.print((i+1)+"회전 → {");
+			for (int j = 0; j < keyArray.length; j++) {
+				System.out.print(keyArray[j]);
+				if(j < keyArray.length-1) {
+					System.out.print(", ");
+				}
+			}
+			System.out.print("}");
+			if(keyArray.length-2 == i) {
+				System.out.print(" ← 정렬 완료");
+			}else {
+				System.out.print("\n");
 			}
 		}
-		System.out.println("합계: " + sum);
 	}
 }

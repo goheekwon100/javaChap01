@@ -1,4 +1,4 @@
-package homework;
+package homework.loop;
 
 import java.util.Scanner;
 
@@ -29,7 +29,7 @@ public class Homework08 {
 			while(true) {
 				System.out.println("다시 입력하시겠습니까? : ");
 				replay = sc.nextLine().charAt(0);
-				if (replay == 'N' || replay == 'n') {
+				if (replay == 'N' || replay == 'n') { //'n'.equalsIgnoreCase(replay)
 					repeatBreak = false;
 					break;
 				}else if (replay == 'Y' || replay == 'y') {

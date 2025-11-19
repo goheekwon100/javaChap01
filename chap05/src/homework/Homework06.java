@@ -1,30 +1,51 @@
 package homework;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Homework06 {
 	public static void main(String[] args) {
-		int num = 5;
+		boolean flag = true;
+		char replayChar;
+		Scanner sc = new Scanner(System.in);
 		
-		int left, right;
-		for (int i = 0; i < num; i++) {
-			for (int j = 0; j < num*2-1; j++) {
-				left = (num*2-1) / 2 - i; //* 출력을 시작할 index
-				right = (num*2-1) / 2 + i;//*출력을 끝낼 index
-				if(j >= left && j <= right){
-					System.out.print("*");
+		System.out.print("배열의 크기를 입력하세요 : ");
+		int arrSize = sc.nextInt();
+		sc.nextLine();
+		String[] subject = new String[arrSize];
+		
+		
+		int addIndex=0;
+		
+		while(flag) {
+			for (int i = 0+addIndex; i < subject.length; i++) {
+				System.out.print((i+1) +"번째 문자열 : ");
+				subject[i] = sc.nextLine();
+			}
+			addIndex = subject.length;
+			while(true) {
+				System.out.println("더 값을 입력하시겠습니까?");
+				replayChar = sc.nextLine().charAt(0);
+				if ("n".equalsIgnoreCase(replayChar+"")) {
+					flag = false;
+					break;
+				}else if ("y".equalsIgnoreCase(replayChar+"")) {
+					flag = true;
+					break;
 				}else {
-					System.out.print(" ");
+					System.out.println("입력할 수 없는 값입니다.");
 				}
 			}
-			System.out.println("");
+			if (flag) {
+				System.out.print("더 입력하고 싶은 갯수 : ");
+				int addArrSize = sc.nextInt();
+				sc.nextLine();
+				subject = Arrays.copyOf(subject,subject.length+addArrSize);
+			}
 		}
+		for (int i = 0; i < subject.length; i++) {
+			System.out.println(subject[i]);
+		}
+		
 	}
 }
-
-//첫번째줄: i가 0일 때 j가 4만 *, 나머지는 모두 공백
-//if문에서 012345678 중 4만 걸러내는 방법
-//j값이 4와 4 사이일 때
-//dan은 5이다, 칸 수는 9칸이다.
-//left와 right 식을 한개씩 정해준다.
-
-//left는 i가 2일때 3 / (num*2-1) / 2 - i
-//right는 i가 2일 때 5 / (num*2-1) / 2 + i
