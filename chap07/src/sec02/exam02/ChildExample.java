@@ -13,6 +13,7 @@ public class ChildExample {
 		Child newChild = (Child)parent;
 		((Child)parent).method3();
 		
-		//하나의 타입으로 여러 객체를 모두 다룰수 있습니다.
+		
+		
 	}
 }

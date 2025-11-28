@@ -1,0 +1,16 @@
+1. 예외 구분
+	가. 컴파일 예외(Exception)
+	나. 실행 예외(Runtime Exception)
+
+2. 실행예외 예시
+	가. Null Point Exception: 참조 대상이 Null인데 접근 시도시 발생
+	나. ArrayIndexOutOfBoundsException: 배열 인덱스 초과 접근시 발생
+	다. 
+	
+3. 예외 처리 코드
+	가. 
+	나. try - catch - finally 블록
+		1) try {} : 예외 발생 가능 코드 작성
+		2) catch {} : 예외 발생시 실행 코드 작성
+		3) finally {} : 예외 여부와 상관없이 항상 실행될 코드 작성, Scanner 객체 close() 등
+		
